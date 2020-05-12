@@ -25,7 +25,7 @@ SECRET_KEY = 'bu_d(yobfxdz*-8%qh0s1q%8_2z1@v2vb1_0@ds+)_%qzb+h#3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0,0,0,0','localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cms.apps.CmsConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -122,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'cms.User'
+LOGIN_URL = 'cms:login'
+LOGIN_REDIRECT_URL = 'cms:top'
+LOGOUT_REDIRECT_URL = 'cms:top'
