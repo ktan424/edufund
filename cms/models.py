@@ -66,6 +66,9 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 
     email = models.EmailField(_('email address'), unique=True)
 
+    date_joined = models.DateTimeField(_('date_joined'), default=timezone.now)
+    twitter = models.CharField(_('Twitter'), max_length=50, blank=True)
+
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
