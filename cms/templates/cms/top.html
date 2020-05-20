@@ -1,4 +1,5 @@
 {% extends 'cms/base.html' %}
+{% load static %}
 
 {% block title %}Home | {% endblock %}
 
@@ -6,25 +7,87 @@
 <section class="hero is-medium is-info is-bold">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title">Edufund</h1>
-            <h2 class="subtitle">Cloudfunding system for tuition</h2>
-            <a href="#">
-                <button class="button is-info is-inverted is-outlined">
-                    <strong>More Info</strong>
-                </button>
-            </a>
+            <h1 class="is-size-1 title">Edufund</h1>
+            <h2 class="subtitle">コロナ禍における学費支援クラウドファンディングサービス</h2>
+            <a href="tutorial"> 
+            <button class="button is-large is-primary">
+                 <strong>クラウドファンドを設立する</strong>
+             </button> 
+        </a>
         </div>
     </div>
 </section>
 {% endblock %}
 
 {% block content %}
-<section class="section is-medium">
+
+<section class="section is-small">
     <div class="container">
         <div class="has-text-centered">
-            <h1 class="title">Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1 class="title">Edufundが提供するもの</h1>
+            <p>コロナ禍で困窮する学生のクラウドファンディングによる学費調達をサポートします。<br>
+                現在、大手のクラウドファンディングサイトでは学生個人の学費・生活費補助に関するプロジェクトは少なく、その他の多くのプロジェクトの中に埋もれてしまっている状況です。Edufundでは、プロジェクト立ち上げのサポートやプロジェクトページの掲示板の運営を行うことで、学生のクラウドファンディング挑戦へのハードルの低下や、学生支援に関心を持つ支援者によるプロジェクトの認知度の向上を期待しています。
+本来であれば本サイトで寄附金のやりとりなどを完結させたいと考えていましたが、不正アクセスなどのセキュリティ面を考え、大手クラウドファンディングサイトを仲介したサービスとなっています。
+            </p>
+        </div>
+    </div>
+</section>
+<section class="section is-small">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title">クラウドファンディングとは</h1>
+            <p>クラウドファンディングとは、「群衆（クラウド）」と「資金調達（ファンディング）」を組み合わせた造語で、「インターネットを介して不特定多数の人々から少額ずつ資金を調達する」ことを指しています。</p>
+            <img class="section is-small" src="{% static 'images/crowdfunding.png' %}" width="500" height="500">
+            <p>(参照：<a href="https://a-port.asahi.com/guide/" target="_blank">https://a-port.asahi.com/guide/</a>)</p>
+        </div>
+    </div>
+</section>
+<section class="section is-small">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title">コロナ禍における学生の現状</h1>
+            <p>我々がこのサービスを作るに至ったのには以下の理由があります。</p>
+            <p>１<br>新型コロナウイルスの感染拡大の影響等により、家計維持者の収入が著しく減少し家計が急変したり、本人のアルバイト収入が著しく減少した事で経済的に困窮してしまい学費や生活費が払えない学生が現れています。<a href="https://www.free20180913.com" target="_blank">学生団体高等教育無償化プロジェクトＦＲＥＥ</a>により119の大学、短大、専門学校から514人(4/21 22:00時点）に対して行われた「新型コロナ感染拡大の学生生活への影響調査」によると、学生の約7.8%が金銭的理由により大学等をやめることを検討していることがわかりました。政府および大学の今後の対応次第ではありますが、この数字は今後さらに増えていくと考えられます。<br>
+            ２<br>働き先を失っている学生にとって、金銭的支援以外に現状を乗り越えるすべがありません。<br>
+            ３<br>学生団体には寄付金を集め、個人に分散していく仕組みが存在しません。<br>
+            ４<br>海外ではクラウドファンディングの設立は資金集めの手段として一般的ですが、日本ではあまり普及していません。</p>
+        </div>
+    </div>
+</section>
+<section class="section is-small">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title">クラウドファンドは一つの支援源</h1>
+            <p>クラウドファンディングは寄付する人に支援相手と支援額の採択権があるため、支援源としての安定性はありません。そのためまず大切なのは、現在申請可能な金銭的支援の状況を把握しておくことです。まずは皆さんが通われている教育機関において緊急給付型奨学金の申請ができるようになっているかをチェックしましょう。さらには、文部科学省のホームページに置いて<a href="https://www.mext.go.jp/a_menu/koutou/hutankeigen/1420041_00003.htm" target="_blank">政府による支援状況</a>
+を随時チェックしましょう。現在行なっているアルバイト等の休業手当の状況を把握しておくことも重要です。</p>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="has-text-centered">
+            <a href="tutorial"> 
+            <button class="button is-large is-primary">
+                 <strong>クラウドファンドを設立する</strong>
+             </button> 
+        </a>
+        </div>
+    </div>
+</section>
+<section class="section is-small">
+    <div class="container">
+        <div class="has-text-centered">
+            <h2 class="title">運営について</h2>
+            <p>Edufundは東京大学工学部三年の学生二人で運営されているクラウドファンディング支援サービスです。新型コロナウイルスの経済的影響により「教育を受ける権利」を失う可能性がある学生たちを救いたいという思いから立ち上げました。需要次第でこれからさらに使いやすいプラットフォームを構築して行きたいと思っています。本サービスは<a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/utokyo-project-sprint/top">UTokyo Project Sprint</a>のサポートを受け、無料で提供しています。サービス改善のための<a href="https://forms.gle/2A1XW4DGytYKg6JF9" target="_blank">アンケート</a>にも是非ご協力お願いします！</p>
+        </div>
+    </div>
+</section>
+<section class="section is-small">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="is-size-2 has-text-danger title">プロジェクトが集まり次第掲載を開始します！</h1>
         </div>
     </div>
 </section>
 {% endblock %}
+
